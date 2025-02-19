@@ -1,5 +1,6 @@
 import { reactRouter } from "@react-router/dev/vite";
 import { defineConfig } from "vite";
+import { cjsInterop } from "vite-plugin-cjs-interop";
 // import babel from "vite-plugin-babel";
 import tsconfigPaths from "vite-tsconfig-paths";
 
@@ -15,5 +16,13 @@ export default defineConfig({
 		port: 3000,
 	},
 
-	plugins: [reactRouter(), tsconfigPaths()],
+	plugins: [
+		reactRouter(),
+		tsconfigPaths(),
+		cjsInterop({
+			dependencies: [
+				"@markdoc/markdoc",
+			],
+		}),
+	],
 });

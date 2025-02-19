@@ -5,19 +5,20 @@
 	"scripts": {
 		"lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
 		"dev": "react-router dev",
-		"start": "node ./build/server/index.js",
+		"start": "react-router-serve ./build/server/index.js",
 		"build": "react-router build --sourcemapClient --sourcemapServer",
 		"typecheck": "react-router typegen && tsc"
 	},
 	"dependencies": {
-		"@react-router/node": "^7.2.0",
 		"@markdoc/markdoc": "^0.5.1",
 		"@react-router/express": "^7.2.0",
-		"react-router": "^7.2.0",
+		"@react-router/node": "^7.2.0",
 		"@react-router/serve": "^7.2.0",
 		"isbot": "^4.1.0",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-router": "^7.2.0",
+		"vite-plugin-cjs-interop": "^2.1.6"
 	},
 	"devDependencies": {
 		"@react-router/dev": "^7.2.0",
